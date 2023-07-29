@@ -26,3 +26,5 @@ A script for fivem using the QBCore framework that implements player owned night
 4. [Polyzone](https://github.com/qbcore-framework/PolyZone)
 5. [oxmysql](https://github.com/overextended/oxmysql)
 
+## License
+Do anything you want with it, no restrictions
