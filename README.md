@@ -21,7 +21,8 @@ A script for fivem using the QBCore framework that implements player owned night
 * Visitable clubs
 
 ## Dependency
-QB-Core
-OX_Lib
-Polyzone
+1. [QB-Core] (https://github.com/qbcore-framework
+2. [OX_Lib](https://github.com/overextended/ox_lib)
+3. [Polyzone] (https://github.com/qbcore-framework/PolyZone)
+4. [oxmysql] (https://github.com/overextended/oxmysql)
 
