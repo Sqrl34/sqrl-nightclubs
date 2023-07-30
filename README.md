@@ -10,6 +10,9 @@ A script for fivem using the QBCore framework that implements player owned night
 4. Go into your database and run the nightclubs.sql file to add it to your database
 5. Go inside the config file and edit to your liking
 
+## Preview
+[youtube](https://www.youtube.com/watch?v=qEzkv861Rfw&ab_channel=SquirrelsScripts)
+
 ## Features
 * Ownable nightclub with price
 * Configureable club decore for everyone
