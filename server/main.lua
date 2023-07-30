@@ -167,7 +167,9 @@ RegisterNetEvent('nightclubs:server:handouts', function(ClubData, Employee, perc
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local total = 0.0
-
+    if percentage > 1 then
+        return
+    end
     total = total + percentage * #Config.PedSpawns.locations * Config.Earnings.admission
     total = total + Config.FoodMission.remove * Config.Earnings.food
     total = total - Config.Employee.dj.price * Config.Employee.dj.hoursworked * tonumber(Employee['dj'])
