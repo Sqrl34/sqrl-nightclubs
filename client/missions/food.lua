@@ -4,8 +4,8 @@ local zones = {}
 local controlListen = false
 local count = 0
 local foodProgress = false
-local data = {}
-data['food'] = 'nil'
+local data = nil
+local setdata
 
 local function removeClose(k)
     RemoveBlip(blips[k])
@@ -111,28 +111,36 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 end)
 
 RegisterNetEvent('nightclubs:client:foodJoinSet', function(d)
+    Wait(15000)
     data = d
+    if data == nil then
+        setdata = false
+    elseif data ~= nil then
+        setdata = true
+    end
 end)
 
 local ranThread = false
 CreateThread(function()
     while true do
         if CLUB_OWNED then
-            if data['food'] ~= tostring(nil) then
-                if GetClockHours() == Config.FoodMission.time and not ranThread then
-                    ranThread = true
-                    local tmp = tonumber(data['food']) - Config.FoodMission.remove
-                    if tmp < Config.FoodMission.min then
-                        QBCore.Functions.Notify('You are running low on nightclub food, replinish it', "error")
+            if setdata then
+                if data['food'] ~= tostring(nil) then
+                    if GetClockHours() == Config.FoodMission.time and not ranThread then
+                        ranThread = true
+                        local tmp = tonumber(data['food']) - Config.FoodMission.remove
+                        if tmp < Config.FoodMission.min then
+                            QBCore.Functions.Notify('You are running low on nightclub food, replinish it', "error")
+                        end
+                        data['food'] = tmp
+                        TriggerServerEvent('nightclubs:server:foodSet', data)
                     end
-                    data['food'] = tmp
-                    TriggerServerEvent('nightclubs:server:foodSet', data)
                 end
             end
         end
-        Wait(10000)
         if GetClockHours() == 24 then
             ranThread = false
         end
+        Wait(10000)
     end
 end)
