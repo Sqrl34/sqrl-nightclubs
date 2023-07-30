@@ -118,10 +118,8 @@ local ranThread = false
 CreateThread(function()
     while true do
         if CLUB_OWNED then
-            print('owned club')
             if data['food'] ~= tostring(nil) then
                 if GetClockHours() == Config.FoodMission.time and not ranThread then
-                    print('clock hours')
                     ranThread = true
                     local tmp = tonumber(data['food']) - Config.FoodMission.remove
                     if tmp < Config.FoodMission.min then
