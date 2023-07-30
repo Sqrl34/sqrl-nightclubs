@@ -189,7 +189,7 @@ RegisterNetEvent('nightclubs:server:handouts', function(ClubData, Employee, perc
         Player.Functions.AddMoney('bank', total, "Nightclub Earn")
         TriggerClientEvent('QBCore:Notify', src, 'Nightclub Earnings', 'success')
     elseif total < 0 then
-        Player.Functions.RemoveMoney('bank', total, "Nightclub Fail")
+        Player.Functions.RemoveMoney('bank', math.abs(total), "Nightclub Fail")
         TriggerClientEvent('QBCore:Notify', src, 'Nightclub Earnings went negative', 'error')
     end
 end)
