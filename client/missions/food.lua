@@ -70,7 +70,7 @@ RegisterNetEvent('nightclubs:client:foodReplinish', function()
                 heading = Config.FoodMission.locations[k].coords.w,
                 maxZ = Config.FoodMission.locations[k].coords.z + 2,
                 min = Config.FoodMission.locations[k].coords.z - 2,
-                debugPoly = true,
+                debugPoly = false,
             })
 
         zones[k]:onPlayerInOut(function(isPointInside, point)
