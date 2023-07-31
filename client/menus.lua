@@ -385,15 +385,6 @@ RegisterNetEvent('nightclubs:client:bossMenu', function(ClubData, Employee)
                 end,
             },
             {
-                title = Config.Price['Upgrades']['Speakers']['Upgraded'].description,
-                description = 'The price is ' .. tostring(Config.Price['Upgrades']['Speakers']['Upgraded'].price),
-                disabled = checkdata(ClubData, 'speakers', 'Speakers', 'Upgraded'),
-                icon = 'coins',
-                onSelect = function()
-                    buyObject(ClubData, 'speakers', 'Speakers', 'Upgraded')
-                end,
-            },
-            {
                 title = Config.Price['Upgrades']['Speakers']['Ultimate'].description,
                 description = 'The price is ' .. tostring(Config.Price['Upgrades']['Speakers']['Ultimate'].price),
                 disabled = checkdata(ClubData, 'speakers', 'Speakers', 'Ultimate'),
