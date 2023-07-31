@@ -101,11 +101,6 @@ Config.Price = {
                 description = 'Basic Speakers',
                 price = 5000
             },
-            ['Upgraded'] = {-- DO NOT EDIT ANYTHING BUT DESCRIPTING OR PRICE
-                name = 'Int01_ba_equipment_setup',
-                description = 'Upgraded Speakers',
-                price = 5000
-            },
             ['Ultimate'] = {-- DO NOT EDIT ANYTHING BUT DESCRIPTING OR PRICE
                 name = 'Int01_ba_equipment_upgrade',
                 description = 'Ultimate Speakers',
