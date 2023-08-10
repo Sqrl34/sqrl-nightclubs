@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 description 'sqrl-nightclubs'
-version '1.0.0'
+version '1.1'
 author 'Sqrl'
 
 shared_scripts {
