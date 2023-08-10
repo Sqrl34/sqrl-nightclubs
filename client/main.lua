@@ -237,6 +237,7 @@ RegisterNetEvent('nightclubs:client:getBucket', function(bucketT)
     bucket = bucketT
 end)
 
+local firstRan  = true
 RegisterNetEvent('nightclubs:client:removeipl', function()
     RemoveIpl('ba_int_placement_ba_interior_0_dlc_int_01_ba_milo_')
     -- Names
@@ -302,8 +303,10 @@ RegisterNetEvent('nightclubs:client:removeipl', function()
 
     removeEmployee()
     removePed()
-
-    UPGRADES:destroy()
+    if not firstRan then
+        UPGRADES:destroy()
+    end
+    firstRan = false
     upgradedone = false
 end)
 

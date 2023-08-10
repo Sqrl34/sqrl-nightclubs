@@ -30,5 +30,10 @@ A script for fivem using the QBCore framework that implements player owned night
 5. [oxmysql](https://github.com/overextended/oxmysql)
 6. [qb-phone](https://github.com/qbcore-framework/qb-phone)
 
+## Updates
+1.1 -
+  * Fixed UPGRADES error upon first time entering the club
+  * Fixed the missing data issue after upgrading the club
+
 ## License
 Do anything you want with it, no restrictions
