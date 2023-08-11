@@ -129,15 +129,9 @@ end)
 local ranThread = false
 CreateThread(function()
     while true do
-        print('owned club')
         if CLUB_OWNED then
-            print('setdata true')
             if setdata then
-                print(data['food'])
                 if data['food'] ~= tostring(nil) then
-                    print(GetClockHours())
-                    print(ranThread)
-                    print('inside')
                     if GetClockHours() == Config.FoodMission.time and not ranThread then
                         ranThread = true
                         local tmp = tonumber(data['food']) - Config.FoodMission.remove
@@ -145,8 +139,6 @@ CreateThread(function()
                             QBCore.Functions.Notify('You are running low on nightclub food, replinish it', "error")
                         end
                         data['food'] = tmp
-                        print(tmp)
-                        print(data['food'])
                         TriggerServerEvent('nightclubs:server:foodSet', data)
                     end
                 end
